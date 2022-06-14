@@ -1,0 +1,253 @@
+:root {
+    --dark: #19283f;
+    --green: #33d1cc;
+    --red: #a41313;
+    --yellow: #ffc400;
+    --section-color: #eff7fa;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background-color: var(--section-color);
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--green);
+}
+body {
+    font-family: "Roboto", sans-serif;
+}
+.main-btn {
+    padding: 0.5rem 1rem;
+    color: var(--yellow);
+    background-color: var(--red);
+}
+.main-btn:hover {
+    color: #fff;
+}
+.main-title::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -20px;
+    width: 120px;
+    height: 2px;
+    background-color: var(--green);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+/*& Start Navbar */
+.navbar {
+    background-color: var(--dark);
+}
+.navbar .navbar-nav .nav-link {
+    color: #fff;
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus {
+    color: var(--green);
+}
+.navbar .search {
+    border-left: 1px solid var(--green);
+}
+.navbar .search svg {
+    color: var(--green);
+}
+.navbar .navbar-toggler {
+    border-color: #fff;
+    color: #fff;
+    font-size: 24px;
+    box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded="true"] {
+    border-color: var(--green);
+}
+/*& End Navbar */
+/*^ Start Landing */
+.landing {
+    background-color: var(--dark);
+    min-height: calc(100vh - 70px);
+}
+/*^ End Landing */
+/*& Start Services */
+.services .row > div {
+    counter-increment: count;
+}
+.services .row > div::before {
+    content: counter(count);
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    font-size: 12rem;
+    font-family: "Montserrat", sans-serif;
+    color: var(--section-color);
+}
+.services .srvc .icon-holder {
+    height: 200px;
+}
+.services .srvc .icon-holder .icon {
+    color: var(--green);
+    left: 50%;
+    bottom: 0;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.services .srvc h4 {
+    color: var(--yellow);
+}
+/*& End Services */
+/*! Start Portfolio */
+.portfolio {
+    background-color: var(--section-color);
+}
+.portfolio ul li {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+.portfolio ul li.active {
+    background-color: var(--red);
+    color: var(--yellow);
+}
+.portfolio ul li:not(.active):hover {
+    color: var(--red);
+}
+.portfolio .box {
+    padding: 5px;
+    overflow: hidden;
+}
+.portfolio .box::before {
+    content: attr(data-work);
+    position: absolute;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.25rem;
+    background-color: rgb(51 209 204 / 75%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-transform: translateX(calc(-100% - 5px));
+    -moz-transform: translateX(calc(-100% - 5px));
+    -ms-transform: translateX(calc(-100% - 5px));
+    -o-transform: translateX(calc(-100% - 5px));
+    transform: translateX(calc(-100% - 5px));
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+.portfolio .box:hover::before {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+}
+.portfolio .btn {
+    width: 200px;
+}
+/*! End Portfolio */
+/** Start About */
+.about .description {
+    max-width: 400px;
+}
+/** End About */
+/*& Start Team */
+.team {
+    background-color: var(--section-color);
+}
+.team h2 {
+    color: var(--yellow);
+}
+.team .box h4 {
+    background-color: var(--green);
+}
+/*& End Team */
+/*^ Start Project */
+.project {
+    background-color: var(--dark);
+}
+/*^ End Project */
+/*! Start Subscribe */
+.subscribe {
+    background-color: var(--yellow);
+}
+.subscribe input[type="email"] {
+    border: none;
+    border-bottom: 1px solid #fff;
+    caret-color: var(--dark);
+    outline: none;
+}
+.subscribe input[type="email"]::placeholder {
+    color: #fff;
+}
+.subscribe input[type="submit"] {
+    background-color: var(--dark);
+    color: var(--yellow);
+}
+/*! End Subscribe */
+/*^ Start Footer & Contact */
+.contact {
+    background-color: var(--dark);
+}
+.contact .info span:first-child,
+.contact .info a {
+    color: var(--green);
+}
+.contact .info span:last-child {
+    color: var(--yellow);
+}
+.contact ul li:hover {
+    color: #fff;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+.contact .social-media ul svg {
+    width: 20px;
+    height: 20px;
+}
+.contact .social-media .facebook {
+    background-color: #1877f2;
+}
+.contact .social-media .twitter {
+    background-color: #1da1f2;
+}
+.contact .social-media .discord {
+    background-color: #5a64f0;
+}
+.contact .social-media .github {
+    background-color: #c9510c;
+}
+/*^ End Footer & Contact */
+/*& Start Scroll To Top Button */
+.to-top {
+    bottom: 20px;
+    right: -1000px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background-color: var(--red);
+    color: var(--section-color);
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+/*& End Scroll To Top Button */
